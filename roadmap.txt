@@ -7,10 +7,11 @@
 - [ ] Definir estructura de navegación y arquitectura de la información
 
 ## 2. Configuración del Proyecto
-- [ ] Inicializar proyecto Next.js con TypeScript
-- [ ] Instalar y configurar TailwindCSS
-- [ ] Organizar fuentes en /public/fonts y configurar en Tailwind
-- [ ] Configurar estructura de carpetas (/components, /pages, /styles, /utils, etc.)
+- [x] Inicializar proyecto Next.js con TypeScript
+- [x] Instalar y configurar ESLint y Prettier
+- [x] Instalar y configurar TailwindCSS
+- [x] Organizar fuentes en /public/fonts y configurar en Tailwind
+- [x] Configurar estructura de carpetas (/components, /pages, /styles, /utils, etc.)
 
 ## 3. Maquetación y Componentes Base
 - [ ] Layout principal (header, footer, navegación)
@@ -36,6 +37,7 @@
 - [ ] Gestión de carrito y pagos (Stripe, PayPal)
 - [ ] Formularios validados y usables
 - [ ] Registro y login de usuarios
+- [ ] Soporte multilenguaje (inglés y español)
 
 ## 7. Despliegue y Analítica
 - [ ] Deploy en Vercel/Netlify
