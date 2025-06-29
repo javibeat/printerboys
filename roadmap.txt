@@ -1,4 +1,4 @@
-# Roadmap para Web de Venta de Productos Impresos en 3D
+# Roadmap para Web Catálogo de Productos Impresos en 3D
 
 ## 1. Definición y Diseño Inicial
 - [x] Definir branding inicial: paleta de colores (azul Apple #0071e3, blanco #ffffff, naranja acento #ff9500)
@@ -15,14 +15,12 @@
 - [x] Configuración de git, ramas (main/dev) y colaboración en GitHub
 
 ## 3. Maquetación y Componentes Base
-- [ ] Layout general (estructura base)
-- [ ] Header minimalista (logo, navegación)
-- [ ] Footer minimalista (info básica, enlaces)
-- [ ] Home minimalista con hero section estilo Bento
-- [ ] Página de productos (grid responsivo, tarjetas estilo Apple)
-- [ ] Página de detalle de producto
-- [ ] Carrito y checkout
-- [ ] Página de contacto y FAQ
+- [x] Layout general (estructura base)
+- [x] Header minimalista (logo, navegación, selector de idioma)
+- [x] Footer minimalista (info básica, enlaces)
+- [x] Home minimalista con hero section estilo Bento
+- [ ] Grid de productos (tarjetas con imagen, nombre, descripción, precio y enlace externo)
+- [ ] Página de contacto o sección de contacto
 
 ## 4. Responsividad y Accesibilidad
 - [ ] Mobile-first, breakpoints para tablet y desktop
@@ -36,10 +34,6 @@
 
 ## 6. Funcionalidad y Experiencia de Usuario
 - [ ] Animaciones suaves y microinteracciones (framer-motion, CSS transitions)
-- [ ] Búsqueda y filtrado de productos
-- [ ] Gestión de carrito y pagos (Stripe, PayPal)
-- [ ] Formularios validados y usables
-- [ ] Registro y login de usuarios
 - [ ] Soporte multilenguaje (inglés y español)
 
 ## 7. Despliegue y Analítica
@@ -54,6 +48,8 @@
 ---
 
 **Notas:**
+- Web tipo escaparate/catálogo, sin registro ni compras internas.
+- Cada producto enlaza a Etsy u otra plataforma externa.
 - Mantener siempre el diseño minimalista y elegante.
 - Priorizar la experiencia móvil y la velocidad de carga.
 - Documentar cada paso y decisión relevante. 

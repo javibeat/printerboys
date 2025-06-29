@@ -2,3 +2,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-gradient-to-br from-white via-gray-50 to-gray-100 min-h-screen antialiased;
+}
+
+/* Sombra premium para tarjetas */
+.card-bento {
+  @apply shadow-xl border border-gray-100 rounded-2xl bg-white transition hover:shadow-2xl hover:-translate-y-1;
+}
+
+/* Botón principal */
+.btn-main {
+  @apply px-8 py-3 rounded-full bg-blue-600 text-white font-clash text-lg shadow hover:bg-blue-700 transition;
+}
+
+/* Botón acento */
+.btn-accent {
+  @apply px-6 py-2 rounded-full bg-orange-500 text-white font-clash shadow hover:bg-orange-600 transition;
+}
