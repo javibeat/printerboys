@@ -1,27 +1,37 @@
 import React from 'react';
 import Layout from '../components/Layout';
+import { useLanguage } from '../context/LanguageContext';
 
 const productos = [
   {
     id: 1,
-    nombre: 'Soporte para móvil',
-    descripcion: 'Soporte impreso en 3D, minimalista y resistente.',
+    nombre: { es: 'Soporte para móvil', en: 'Phone stand' },
+    descripcion: {
+      es: 'Soporte impreso en 3D, minimalista y resistente.',
+      en: '3D printed stand, minimalist and sturdy.',
+    },
     precio: '12,90€',
     imagen: '',
     enlace: 'https://www.etsy.com/',
   },
   {
     id: 2,
-    nombre: 'Organizador de cables',
-    descripcion: 'Mantén tus cables ordenados con estilo.',
+    nombre: { es: 'Organizador de cables', en: 'Cable organizer' },
+    descripcion: {
+      es: 'Mantén tus cables ordenados con estilo.',
+      en: 'Keep your cables tidy in style.',
+    },
     precio: '7,50€',
     imagen: '',
     enlace: 'https://www.etsy.com/',
   },
   {
     id: 3,
-    nombre: 'Maceta decorativa',
-    descripcion: 'Maceta moderna para plantas pequeñas.',
+    nombre: { es: 'Maceta decorativa', en: 'Decorative pot' },
+    descripcion: {
+      es: 'Maceta moderna para plantas pequeñas.',
+      en: 'Modern pot for small plants.',
+    },
     precio: '9,90€',
     imagen: '',
     enlace: 'https://www.etsy.com/',
@@ -29,32 +39,166 @@ const productos = [
 ];
 
 export default function Home() {
+  const { t, language } = useLanguage();
   return (
     <Layout>
-      <div className="w-full max-w-6xl mx-auto px-4">
-        {/* Hero Section visual */}
-        <section className="flex flex-col items-center justify-center text-center py-20 gap-8">
-          <div className="bg-white/80 shadow-2xl rounded-3xl px-10 py-14 flex flex-col items-center max-w-2xl w-full border border-gray-100">
-            <h1 className="text-5xl md:text-6xl font-bebas text-blue-600 leading-tight mb-4 drop-shadow-sm">Impresión 3D premium<br />para tus ideas</h1>
-            <p className="font-clash text-lg text-gray-700 max-w-2xl mb-6">Descubre nuestro catálogo de productos impresos en 3D: diseño minimalista, calidad profesional y envío rápido. Cada producto enlaza a nuestra tienda en Etsy para una compra segura y sencilla.</p>
-            <a href="#productos" className="btn-main">Ver catálogo</a>
+      <div style={{ width: '100%', maxWidth: '72rem', margin: '0 auto', padding: '0 1rem' }}>
+        {/* Hero Section */}
+        <section style={{ 
+          display: 'flex', 
+          flexDirection: 'column', 
+          alignItems: 'center', 
+          justifyContent: 'center', 
+          textAlign: 'center', 
+          padding: '5rem 0', 
+          gap: '2rem' 
+        }}>
+          <div style={{
+            background: 'rgba(255, 255, 255, 0.8)',
+            boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+            borderRadius: '2rem',
+            padding: '3.5rem 2.5rem',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            maxWidth: '42rem',
+            width: '100%',
+            border: '1px solid rgb(243 244 246)'
+          }}>
+            <h1 style={{
+              fontSize: '2.5rem',
+              fontFamily: '"Bebas Neue", sans-serif',
+              color: 'rgb(37 99 235)',
+              lineHeight: '1.1',
+              marginBottom: '1rem',
+              filter: 'drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1))',
+              wordBreak: 'break-word',
+              textAlign: 'center',
+            }}>
+              {t.heroTitle}
+            </h1>
+            <p style={{
+              fontFamily: '"Clash Grotesk", sans-serif',
+              fontSize: '1.125rem',
+              color: 'rgb(55 65 81)',
+              maxWidth: '42rem',
+              marginBottom: '1.5rem',
+              textAlign: 'center',
+            }}>
+              {t.heroDesc}
+            </p>
+            <a href="#productos" className="btn-main" style={{
+              padding: '0.75rem 2rem',
+              borderRadius: '9999px',
+              backgroundColor: 'rgb(37 99 235)',
+              color: 'white',
+              fontFamily: '"Clash Grotesk", sans-serif',
+              fontSize: '1.125rem',
+              textDecoration: 'none',
+              boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+              transition: 'all 0.3s ease',
+              width: '100%',
+              maxWidth: '16rem',
+              textAlign: 'center',
+              margin: '0 auto',
+              display: 'block',
+            }}>
+              {t.viewCatalog}
+            </a>
           </div>
         </section>
 
-        {/* Grid de productos visual */}
-        <section id="productos" className="mt-20 mb-16">
-          <h2 className="text-3xl font-bebas text-gray-900 mb-12 text-center">Productos destacados</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 justify-items-center">
+        {/* Grid de productos */}
+        <section id="productos" style={{ marginTop: '5rem', marginBottom: '4rem' }}>
+          <h2 style={{
+            fontSize: '1.875rem',
+            fontFamily: '"Bebas Neue", sans-serif',
+            color: 'rgb(17 24 39)',
+            marginBottom: '3rem',
+            textAlign: 'center'
+          }}>
+            {t.featured}
+          </h2>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: '3rem',
+            justifyItems: 'center'
+          }}>
             {productos.map((producto) => (
-              <div key={producto.id} className="card-bento p-8 flex flex-col items-center w-full max-w-xs group transition-transform duration-200">
-                <div className="w-32 h-32 bg-gradient-to-br from-gray-100 via-white to-gray-200 rounded-2xl mb-6 flex items-center justify-center border border-gray-200 shadow-inner group-hover:scale-105 transition-transform">
-                  {/* Placeholder SVG de producto */}
-                  <svg width="56" height="56" fill="none" viewBox="0 0 56 56"><rect width="56" height="56" rx="16" fill="#e5e7eb"/><rect x="14" y="36" width="28" height="6" rx="3" fill="#cbd5e1"/><rect x="18" y="14" width="20" height="18" rx="4" fill="#d1d5db"/></svg>
+              <div key={producto.id} className="card-bento" style={{
+                padding: '2rem',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                width: '100%',
+                maxWidth: '20rem',
+                transition: 'transform 0.2s ease',
+                borderRadius: '2rem',
+              }}>
+                <div style={{
+                  width: '8rem',
+                  height: '8rem',
+                  background: 'linear-gradient(135deg, rgb(243 244 246) 0%, white 50%, rgb(229 231 235) 100%)',
+                  borderRadius: '1.5rem',
+                  marginBottom: '1.5rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  border: '1px solid rgb(229 231 235)',
+                  boxShadow: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)'
+                }}>
+                  <svg width="56" height="56" fill="none" viewBox="0 0 56 56">
+                    <rect width="56" height="56" rx="16" fill="#e5e7eb"/>
+                    <rect x="14" y="36" width="28" height="6" rx="3" fill="#cbd5e1"/>
+                    <rect x="18" y="14" width="20" height="18" rx="4" fill="#d1d5db"/>
+                  </svg>
                 </div>
-                <h3 className="font-clash text-xl text-gray-800 mb-2 text-center">{producto.nombre}</h3>
-                <p className="font-montserrat text-gray-500 text-center mb-2">{producto.descripcion}</p>
-                <span className="font-bebas text-lg text-blue-600 mb-4">{producto.precio}</span>
-                <a href={producto.enlace} target="_blank" rel="noopener noreferrer" className="btn-accent w-full text-center">Ver en Etsy</a>
+                <h3 style={{
+                  fontFamily: '"Clash Grotesk", sans-serif',
+                  fontSize: '1.25rem',
+                  color: 'rgb(31 41 55)',
+                  marginBottom: '0.5rem',
+                  textAlign: 'center'
+                }}>
+                  {producto.nombre[language]}
+                </h3>
+                <p style={{
+                  fontFamily: 'Montserrat, sans-serif',
+                  color: 'rgb(107 114 128)',
+                  textAlign: 'center',
+                  marginBottom: '0.5rem'
+                }}>
+                  {producto.descripcion[language]}
+                </p>
+                <span style={{
+                  fontFamily: '"Bebas Neue", sans-serif',
+                  fontSize: '1.125rem',
+                  color: 'rgb(37 99 235)',
+                  marginBottom: '1rem'
+                }}>
+                  {producto.precio}
+                </span>
+                <a 
+                  href={producto.enlace} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="btn-accent"
+                  style={{
+                    padding: '0.5rem 1.5rem',
+                    borderRadius: '9999px',
+                    backgroundColor: 'rgb(249 115 22)',
+                    color: 'white',
+                    fontFamily: '"Clash Grotesk", sans-serif',
+                    textDecoration: 'none',
+                    width: '100%',
+                    textAlign: 'center',
+                    boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+                    transition: 'all 0.3s ease'
+                  }}
+                >
+                  {t.viewOnEtsy}
+                </a>
               </div>
             ))}
           </div>

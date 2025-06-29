@@ -1,23 +1,54 @@
 @import './fonts.css';
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 body {
-  @apply bg-gradient-to-br from-white via-gray-50 to-gray-100 min-h-screen antialiased;
+  background: linear-gradient(135deg, white 0%, rgb(249 250 251) 50%, rgb(243 244 246) 100%);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Sombra premium para tarjetas */
 .card-bento {
-  @apply shadow-xl border border-gray-100 rounded-2xl bg-white transition hover:shadow-2xl hover:-translate-y-1;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgb(243 244 246);
+  border-radius: 1rem;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.card-bento:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+  transform: translateY(-4px);
 }
 
 /* Botón principal */
 .btn-main {
-  @apply px-8 py-3 rounded-full bg-blue-600 text-white font-clash text-lg shadow hover:bg-blue-700 transition;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  background-color: rgb(37 99 235);
+  color: white;
+  font-family: 'Clash Grotesk', sans-serif;
+  font-size: 1.125rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.btn-main:hover {
+  background-color: rgb(29 78 216);
 }
 
 /* Botón acento */
 .btn-accent {
-  @apply px-6 py-2 rounded-full bg-orange-500 text-white font-clash shadow hover:bg-orange-600 transition;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  background-color: rgb(249 115 22);
+  color: white;
+  font-family: 'Clash Grotesk', sans-serif;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.btn-accent:hover {
+  background-color: rgb(234 88 12);
 }

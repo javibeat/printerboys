@@ -18,9 +18,10 @@
 - [x] Layout general (estructura base)
 - [x] Header minimalista (logo, navegación, selector de idioma)
 - [x] Footer minimalista (info básica, enlaces)
-- [x] Home minimalista con hero section estilo Bento
-- [ ] Grid de productos (tarjetas con imagen, nombre, descripción, precio y enlace externo)
-- [ ] Página de contacto o sección de contacto
+- [x] Home minimalista con hero section estilo Bento y diseño premium
+- [x] Grid de productos (tarjetas visuales, imagen, nombre, descripción, precio y enlace externo)
+- [ ] Sección de contacto/redes sociales
+- [ ] Mejoras visuales y microinteracciones (hover, animaciones, detalles)
 
 ## 4. Responsividad y Accesibilidad
 - [ ] Mobile-first, breakpoints para tablet y desktop
