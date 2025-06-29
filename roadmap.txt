@@ -12,9 +12,12 @@
 - [x] Instalar y configurar TailwindCSS
 - [x] Organizar fuentes en /public/fonts y configurar en Tailwind
 - [x] Configurar estructura de carpetas (/components, /pages, /styles, /utils, etc.)
+- [x] Configuración de git, ramas (main/dev) y colaboración en GitHub
 
 ## 3. Maquetación y Componentes Base
-- [ ] Layout principal (header, footer, navegación)
+- [ ] Layout general (estructura base)
+- [ ] Header minimalista (logo, navegación)
+- [ ] Footer minimalista (info básica, enlaces)
 - [ ] Home minimalista con hero section estilo Bento
 - [ ] Página de productos (grid responsivo, tarjetas estilo Apple)
 - [ ] Página de detalle de producto
