@@ -1,0 +1,54 @@
+# Roadmap para Web de Venta de Productos Impresos en 3D
+
+## 1. Definición y Diseño Inicial
+- [x] Definir branding inicial: paleta de colores (azul Apple #0071e3, blanco #ffffff, naranja acento #ff9500)
+- [x] Selección de tipografías: Montserrat, Clash Grotesk, Bebas Neue
+- [ ] Bocetos wireframe (desktop, tablet, móvil)
+- [ ] Definir estructura de navegación y arquitectura de la información
+
+## 2. Configuración del Proyecto
+- [ ] Inicializar proyecto Next.js con TypeScript
+- [ ] Instalar y configurar TailwindCSS
+- [ ] Organizar fuentes en /public/fonts y configurar en Tailwind
+- [ ] Configurar estructura de carpetas (/components, /pages, /styles, /utils, etc.)
+
+## 3. Maquetación y Componentes Base
+- [ ] Layout principal (header, footer, navegación)
+- [ ] Home minimalista con hero section estilo Bento
+- [ ] Página de productos (grid responsivo, tarjetas estilo Apple)
+- [ ] Página de detalle de producto
+- [ ] Carrito y checkout
+- [ ] Página de contacto y FAQ
+
+## 4. Responsividad y Accesibilidad
+- [ ] Mobile-first, breakpoints para tablet y desktop
+- [ ] Accesibilidad (WCAG, navegación teclado, contraste, etiquetas ARIA)
+
+## 5. SEO y Performance
+- [ ] Estructura semántica (HTML5, headings, landmarks)
+- [ ] Meta tags, Open Graph, sitemap.xml, robots.txt
+- [ ] Optimización de imágenes (WebP, lazy loading)
+- [ ] Core Web Vitals (Lighthouse)
+
+## 6. Funcionalidad y Experiencia de Usuario
+- [ ] Animaciones suaves y microinteracciones (framer-motion, CSS transitions)
+- [ ] Búsqueda y filtrado de productos
+- [ ] Gestión de carrito y pagos (Stripe, PayPal)
+- [ ] Formularios validados y usables
+- [ ] Registro y login de usuarios
+
+## 7. Despliegue y Analítica
+- [ ] Deploy en Vercel/Netlify
+- [ ] Configurar Google Analytics y/o Plausible
+- [ ] Monitorización de errores (Sentry)
+
+## 8. Iteración y Feedback
+- [ ] Testeo con usuarios reales
+- [ ] Mejoras continuas según feedback
+
+---
+
+**Notas:**
+- Mantener siempre el diseño minimalista y elegante.
+- Priorizar la experiencia móvil y la velocidad de carga.
+- Documentar cada paso y decisión relevante. 
